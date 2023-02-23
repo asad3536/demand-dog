@@ -1,0 +1,174 @@
+/************** Font Variants *************/
+@font-face {
+  font-family: "semplicitaPro-bold";
+  src: url(assets/fonts/semplicitapro/SemplicitaPro-Bold.otf);
+}
+@font-face {
+  font-family: "semplicitaPro-medium";
+  src: url(assets/fonts/semplicitapro/SemplicitaPro-Medium.otf);
+}
+img {
+  width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+/************** Containers  *************/
+.custom-contain {
+  max-width: 1440px;
+}
+
+/************** Typography  *************/
+body {
+  font-family: "semplicitaPro-regular";
+  font-size: 1rem;
+}
+h1,
+h2,
+h3 {
+  padding-bottom: 2rem;
+}
+h1 {
+  font-size: 4.5rem;
+  font-family: "semplicitaPro-bold";
+}
+h2 {
+  font-size: 3.1rem;
+  font-family: "semplicitaPro-bold";
+}
+h3 {
+  font-size: 2.5rem;
+  font-family: "semplicitaPro-bold";
+}
+p {
+  font-size: 1.9rem;
+  font-family: "semplicitaPro-medium";
+}
+.text-bold {
+  font-family: "semplicitaPro-bold";
+}
+
+/************** Button Variants *************/
+.btn {
+  padding: 0.8rem 2.5rem;
+  border-radius: 10px;
+  font-family: "semplicitaPro-bold";
+  letter-spacing: normal;
+}
+.btn-large {
+  font-size: 1.5rem;
+  padding: 1rem 5rem;
+}
+.btn-variant-one {
+  background-color: #3b94d8;
+  color: #fff;
+}
+
+.btn-variant-two {
+  background-color: #fff;
+  color: #3b94d8;
+  border-color: #fff;
+}
+
+/************** Header Start *************/
+header {
+  position: absolute;
+  background-color: transparent;
+  z-index: 1000;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+header .logo {
+  width: 150px;
+}
+header ul li a {
+  font-family: "semplicitaPro-bold";
+  text-transform: uppercase;
+  color: #201e1f;
+  font-size: 1rem;
+}
+header input::placeholder {
+  color: #fff;
+}
+.flushed-input {
+  border: 0;
+  border-bottom: 1px solid black;
+  border-radius: 0;
+  background-color: transparent;
+}
+.flushed-inpu:focus {
+  background: no-repeat;
+  box-shadow: none;
+}
+header i {
+  color: #fff;
+}
+
+header .flushed-input {
+  border-bottom: 1px solid #d1d1d1;
+}
+header .flushed-input::placeholder {
+  color: #fff;
+}
+/************** End Header *************/
+
+/************** Banner Section Start *************/
+section {
+  padding: 100px 0px;
+}
+.banner {
+  background-image: url(assets/images/hero.webp);
+  position: relative;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+.banner .content {
+  align-items: flex-start;
+}
+/************** End Banner Section  *************/
+
+/************** Features Section Start *************/
+.features {
+  background-image: url(assets/images/features-bg.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.features p {
+  max-width: 1300px;
+  margin: auto;
+}
+.card {
+  padding: 20px 19px;
+  border-radius: 25px;
+  box-shadow: 0 19px 35px 0 rgba(153, 173, 217, 0.19);
+  background-color: #fff;
+  border: 1px solid transparent;
+}
+/************** End Features Section *************/
+
+/************** Call To Action Section *************/
+.call-to-action {
+  background-color: #3b59d8;
+  color: #fff;
+}
+.call-to-action .logo-wrap {
+  max-width: 568px;
+  margin: auto;
+}
+/************** Footer  *************/
+
+footer p {
+  font-size: 1rem;
+}
+footer .content {
+  max-width: 1015px;
+  margin: auto;
+}
+
+/************** End Footer  *************/

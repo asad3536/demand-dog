@@ -1,5 +1,5 @@
 const swiper = new Swiper('.swiper', {
-    slidesPerView: 5,
+    slidesPerView: 6,
     spaceBetween: 10,
     // Optional parameters
     direction: 'horizontal',
@@ -26,7 +26,7 @@ const swiper = new Swiper('.swiper', {
 
   const servicesSlider = new Swiper('.services-slider', {
     slidesPerView: 4,
-    spaceBetween: 12,
+    spaceBetween: 30,
     // Optional parameters
     direction: 'horizontal',
     loop: true,

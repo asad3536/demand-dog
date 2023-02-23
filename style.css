@@ -1,12 +1,26 @@
+:root {
+  --color-primary: #3b94d8;
+  --color-primary-dark: #3b59d8;
+}
+
 /************** Font Variants *************/
 @font-face {
   font-family: "semplicitaPro-bold";
   src: url(assets/fonts/semplicitapro/SemplicitaPro-Bold.otf);
 }
 @font-face {
+  font-family: "semplicitaPro-semibold";
+  src: url(assets/fonts/semplicitapro/SemplicitaPro-Semibold.otf);
+}
+@font-face {
   font-family: "semplicitaPro-medium";
   src: url(assets/fonts/semplicitapro/SemplicitaPro-Medium.otf);
 }
+@font-face {
+  font-family: "semplicitaPro-light";
+  src: url(assets/fonts/semplicitapro/SemplicitaPro-Light.otf);
+}
+
 img {
   width: 100%;
 }
@@ -22,7 +36,7 @@ a {
 
 /************** Typography  *************/
 body {
-  font-family: "semplicitaPro-regular";
+  font-family: "semplicitaPro-medium", sans-serif;
   font-size: 1rem;
 }
 h1,
@@ -32,29 +46,40 @@ h3 {
 }
 h1 {
   font-size: 4.5rem;
-  font-family: "semplicitaPro-bold";
+  font-family: "semplicitaPro-bold", sans-serif;
 }
 h2 {
   font-size: 3.1rem;
-  font-family: "semplicitaPro-bold";
+  font-family: "semplicitaPro-bold", sans-serif;
 }
 h3 {
   font-size: 2.5rem;
-  font-family: "semplicitaPro-bold";
+  font-family: "semplicitaPro-bold", sans-serif;
 }
 p {
   font-size: 1.9rem;
-  font-family: "semplicitaPro-medium";
+  font-family: "semplicitaPro-medium", sans-serif;
 }
+
 .text-bold {
-  font-family: "semplicitaPro-bold";
+  font-family: "semplicitaPro-bold", sans-serif;
+}
+.text-semibold {
+  font-family: "semplicitaPro-semibold", sans-serif;
+}
+.text-regular {
+  font-family: "semplicitaPro-medium", sans-serif;
+}
+
+.fs-24 {
+  font-size: 1.5rem;
 }
 
 /************** Button Variants *************/
 .btn {
   padding: 0.8rem 2.5rem;
   border-radius: 10px;
-  font-family: "semplicitaPro-bold";
+  font-family: "semplicitaPro-bold", sans-serif;
   letter-spacing: normal;
 }
 .btn-large {
@@ -72,6 +97,15 @@ p {
   border-color: #fff;
 }
 
+/************** Colors *************/
+
+.color-primary {
+  color: var(--color-primary);
+}
+.color-primary-dark {
+  color: var(--color-primary-dark);
+}
+
 /************** Header Start *************/
 header {
   position: absolute;
@@ -85,7 +119,7 @@ header .logo {
   width: 150px;
 }
 header ul li a {
-  font-family: "semplicitaPro-bold";
+  font-family: "semplicitaPro-bold", sans-serif;
   text-transform: uppercase;
   color: #201e1f;
   font-size: 1rem;
@@ -93,15 +127,20 @@ header ul li a {
 header input::placeholder {
   color: #fff;
 }
+header input:focus::placeholder {
+  color: #fff;
+}
 .flushed-input {
   border: 0;
   border-bottom: 1px solid black;
   border-radius: 0;
   background-color: transparent;
+  font-size: 17px;
 }
-.flushed-inpu:focus {
-  background: no-repeat;
+.flushed-input:focus {
+  background-color: transparent;
   box-shadow: none;
+  color: #fff;
 }
 header i {
   color: #fff;
@@ -109,15 +148,21 @@ header i {
 
 header .flushed-input {
   border-bottom: 1px solid #d1d1d1;
+  font-weight: 500;
 }
 header .flushed-input::placeholder {
   color: #fff;
+  text-transform: uppercase;
 }
+
 /************** End Header *************/
 
 /************** Banner Section Start *************/
 section {
   padding: 100px 0px;
+}
+section p {
+  padding-bottom: 50px;
 }
 .banner {
   background-image: url(assets/images/hero.webp);
@@ -139,6 +184,11 @@ section {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.features h2 {
+  -webkit-text-stroke: 2px #201e1f;
+  max-width: 1067px;
+  margin: auto;
+}
 .features p {
   max-width: 1300px;
   margin: auto;
@@ -151,11 +201,46 @@ section {
   border: 1px solid transparent;
 }
 /************** End Features Section *************/
+/************** Why Us Section Start *************/
+.colored-text {
+  color: var(--color-primary);
+  font-size: 3rem;
+  font-family: "semplicitaPro-bold", sans-serif;
+}
 
+/************** Why Us Section End *************/
+/************** Services Section Start *************/
+.services {
+  background-image: url(assets/images/half-wave.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.services p {
+  max-width: 1100px;
+  margin: auto;
+}
+.icon-card .card-img-wrap.img-sm {
+  width: 240px;
+  margin: auto;
+}
+
+/************** Services Section End *************/
 /************** Call To Action Section *************/
 .call-to-action {
   background-color: #3b59d8;
   color: #fff;
+  position: relative;
+}
+section.call-to-action::after {
+  inset: 0;
+  background: url(assets/images/cta-pattern.webp);
+  position: absolute;
+  content: "";
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 .call-to-action .logo-wrap {
   max-width: 568px;
@@ -165,10 +250,69 @@ section {
 
 footer p {
   font-size: 1rem;
+  color: #253b58;
 }
 footer .content {
   max-width: 1015px;
   margin: auto;
 }
-
+footer i {
+  font-size: 24px;
+}
 /************** End Footer  *************/
+
+/********************* Services Page  ********************
+
+**************************************************************/
+.header-variant-one i {
+  color: #201e1f;
+}
+.header-variant-one .flushed-input::placeholder {
+  color: #676767;
+}
+.header-variant-one .flushed-input:focus::placeholder {
+  color: #676767;
+}
+.services-page-wrapper .services {
+  background-image: url(assets/images/wave-flip-vertical.svg);
+  background-size: 100%;
+}
+
+/********************* End Services Page  ********************
+
+**************************************************************/
+
+/********************* About Us Page  ********************
+
+**************************************************************/
+
+/********************* About Us Section  ********************/
+.about .img-wrapper {
+  position: relative;
+  z-index: 10;
+  max-width: 1244px;
+  margin: auto;
+}
+.about .img-wrapper img {
+  border-radius: 30px;
+}
+/********************* End About Us Section  ********************/
+
+/********************* Call To Action Section  ********************/
+.custom-contain-sm {
+  max-width: 1300px;
+}
+.aboutus-page-wrapper .call-to-action {
+  margin-top: -197px;
+  z-index: 1;
+  padding-top: 190px;
+}
+/********************* End Call To Action  ********************/
+
+/********************* Help Section  ********************/
+
+/********************* Help Section  ********************/
+
+/********************* About Us Page  ********************
+
+**************************************************************/

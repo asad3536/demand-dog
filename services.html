@@ -44,6 +44,20 @@
               ><img src="assets/images/logo.webp" alt="" alt="Logo"
             /></a>
           </div>
+          <div class="search-input-wrap d-flex d-md-flex d-lg-none">
+            <input
+              class="form-control mr-sm-2 flushed-input"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <!-- <a
+            href="#"
+            class="btn btn-primary btn-variant-two text-capitalize d-block d-lg-none"
+            >login</a
+          > -->
           <button
             class="navbar-toggler"
             type="button"
@@ -53,52 +67,30 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"
+              ><i class="fa-solid fa-bars"></i
+            ></span>
           </button>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#"
-                  >Home <span class="sr-only">(current)</span></a
-                >
+              <li class="nav-item">
+                <a class="nav-link" href="about-us.html">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="services.html">services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">services</a>
+                <a class="nav-link" href="contact-us.html">Contact</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Siren ai</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  policies
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
+              <li class="nav-ite">
+                <a class="nav-link" href="privacy-policy.html"> policies </a>
               </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
               <a
                 href="#"
-                class="btn btn-primary btn-variant-two text-capitalize mr-5"
+                class="btn btn-primary btn-variant-two text-capitalize mr-5 d-none d-lg-block"
                 >login</a
               >
               <div class="social-links">
@@ -107,7 +99,7 @@
                 <a href="#"><i class="mr-2 fa-brands fa-twitter"></i></a>
                 <a href="#"><i class="mr-2 fa-brands fa-linkedin-in"></i></a>
               </div>
-              <div class="search-input-wrap">
+              <div class="search-input-wrap d-none d-md-none d-lg-flex">
                 <input
                   class="form-control mr-sm-2 flushed-input"
                   type="search"

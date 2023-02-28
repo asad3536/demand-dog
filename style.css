@@ -650,10 +650,16 @@ hr.divider {
   header .logo {
     max-width: 100px;
   }
+  .banner .row {
+    gap: 2rem;
+  }
   .banner .content {
     padding-top: 50px;
   }
 
+  .why-us .row {
+    gap: 2rem;
+  }
   .colored-text {
     font-size: 2rem;
   }

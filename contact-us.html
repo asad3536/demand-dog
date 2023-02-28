@@ -41,11 +41,13 @@
         <div class="container custom-contain">
           <nav class="navbar navbar-expand-lg px-0">
             <div>
-              <a class="navbar-brand logo" href="#"
+              <a class="navbar-brand logo" href="index.html"
                 ><img src="assets/images/logo.webp" alt="" alt="Logo"
               /></a>
             </div>
-            <div class="search-input-wrap d-flex d-md-flex d-lg-none">
+            <div
+              class="search-input-wrap d-flex align-items-center d-md-flex d-lg-none"
+            >
               <input
                 class="form-control mr-sm-2 flushed-input"
                 type="search"
@@ -91,7 +93,7 @@
               <form class="form-inline my-2 my-lg-0">
                 <a
                   href="#"
-                  class="btn btn-primary btn-variant-two text-capitalize mr-5 d-none d-lg-block"
+                  class="btn btn-variant-two text-capitalize mr-2 mr-xl-5 d-none d-lg-block"
                   >login</a
                 >
                 <div class="social-links">
@@ -100,7 +102,9 @@
                   <a href="#"><i class="mr-2 fa-brands fa-twitter"></i></a>
                   <a href="#"><i class="mr-2 fa-brands fa-linkedin-in"></i></a>
                 </div>
-                <div class="search-input-wrap d-none d-md-none d-lg-flex">
+                <div
+                  class="search-input-wrap d-none d-md-none d-lg-flex align-items-center"
+                >
                   <input
                     class="form-control mr-sm-2 flushed-input"
                     type="search"
@@ -116,7 +120,7 @@
       </header>
       <!--================== End Header ===================-->
       <main class="privacy-page-wrapper">
-        <!--================== Users Section   ===================-->
+        <!--================== Contact Section   ===================-->
         <section class="privacy-policy">
           <div class="container custom-contain-sm">
             <div class="row text-sm-center text-md-left">
@@ -128,42 +132,60 @@
                 <div class="contact-form">
                   <form action="">
                     <div class="row">
-                      <div class="col-md-6">
+                      <div class="col-md-6 mb-4 mb-md-5">
                         <label class="text-semibold" for="">First Name</label>
-                        <input class="form-control" type="text" name="" id="" />
+                        <input
+                          class="form-control"
+                          placeholder="First Name"
+                          type="text"
+                          name=""
+                          id=""
+                        />
                       </div>
-                      <div class="col-md-6">
+                      <div class="col-md-6 mb-4 mb-md-5">
                         <label class="text-semibold" for="">Last Name</label>
-                        <input class="form-control" type="text" name="" id="" />
+                        <input
+                          class="form-control"
+                          type="text"
+                          placeholder="Last Name"
+                          name=""
+                          id=""
+                        />
                       </div>
-                      <div class="col-md-6">
+                      <div class="col-md-6 mb-4 mb-md-5">
                         <label class="text-semibold" for=""
                           >Email Address</label
                         >
                         <input
                           class="form-control"
                           type="email"
+                          placeholder="Enter your email address"
                           name=""
                           id=""
                         />
                       </div>
-                      <div class="col-md-6">
+                      <div class="col-md-6 mb-4 mb-md-5">
                         <label class="text-semibold" for="">Phone Number</label>
-                        <input class="form-control" type="tel" name="" id="" />
+                        <input
+                          class="form-control"
+                          placeholder="Phone Number"
+                          type="tel"
+                          name=""
+                          id=""
+                        />
                       </div>
                       <div class="col-md-12">
                         <label class="text-semibold" for="">Message</label>
                         <textarea
                           class="form-control"
                           name=""
+                          placeholder="Phone Number"
                           id=""
                           cols="30"
                           rows="10"
                         ></textarea>
-                        <div class="btn-wrap text-center pt-3 pt-md-5">
-                          <a
-                            href=""
-                            class="btn btn-large btn-primary btn-variant-one"
+                        <div class="btn-wrap text-center pt-5 pt-md-5">
+                          <a href="" class="btn btn-large btn-variant-one"
                             >Send Message</a
                           >
                         </div>
@@ -175,8 +197,31 @@
             </div>
           </div>
         </section>
-        <!--================== End Users Section  ===================-->
+        <!--================== End Contact Section  ===================-->
         <hr class="my-0 divider" />
+
+        <section class="call-to-action">
+          <div class="container custom-contain">
+            <div class="row text-center">
+              <div class="col-md-12">
+                <h2>Contact Information</h2>
+                <div class="contact-info-wrap">
+                  <div class="row">
+                    <div class="column col-md-4 mb-3">
+                      <span>(123) 4567 8910</span>
+                    </div>
+                    <div class="column col-md-4 mb-3">
+                      <span>Info@intentium.com</span>
+                    </div>
+                    <div class="column col-md-4 mb-3">
+                      <span>1234 Street 5678 Done</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <!--================== Footer Section   ===================-->
       <section>

@@ -102,12 +102,17 @@ p {
 .btn:hover {
   color: #fff;
   box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+  border: 1px solid transparent;
 }
 
 .btn-variant-two {
   background-color: #fff;
   color: #3b94d8;
   border-color: #fff;
+}
+.btn-variant-two:hover {
+  background-color: #3b94d8;
+  color: #fff;
 }
 .btn-variant-three {
   background-color: #fff;
@@ -147,6 +152,12 @@ header ul li a {
   text-transform: uppercase;
   color: #201e1f;
   font-size: 1rem;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s ease-in-out;
+}
+
+header ul li:hover > a {
+  border-bottom: 2px solid #000;
 }
 header input::placeholder {
   color: #fff;
@@ -196,6 +207,7 @@ section p {
   background-size: cover;
   display: flex;
   align-items: center;
+  background-position: 100% 100%;
 }
 .banner .content {
   align-items: flex-start;
@@ -276,6 +288,7 @@ section p {
   background-color: #3b59d8;
   color: #fff;
   position: relative;
+  z-index: 0;
 }
 section.call-to-action::after {
   inset: 0;
@@ -286,7 +299,8 @@ section.call-to-action::after {
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
+  z-index: -1;
 }
 .call-to-action .logo-wrap {
   max-width: 568px;
@@ -318,6 +332,9 @@ footer i {
   color: #fff;
 }
 .header-variant-one .flushed-input::placeholder {
+  color: #676767;
+}
+.header-variant-one .flushed-input:focus {
   color: #676767;
 }
 .header-variant-one .flushed-input:focus::placeholder {
@@ -366,6 +383,10 @@ footer i {
 .help {
   background-color: #f0f8fe;
 }
+.help .icon-card .card-img-wrap.img-sm {
+  height: 111px;
+}
+
 .wave-pattern::after {
   content: "";
   position: absolute;
@@ -393,8 +414,8 @@ footer i {
   overflow: hidden;
 }
 .swiper-pagination-bullet {
-  width: 15px;
-  height: 15px;
+  width: 12px;
+  height: 12px;
 }
 .page-bg {
   background: url(assets/images/page-bg.svg);
@@ -433,6 +454,44 @@ hr.divider {
   box-shadow: 0 8px 16px 0 #edf2f9;
   border: solid 2px #3b94d8;
   background-color: #fff;
+}
+.contact-form label {
+  font-size: 1.3rem;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  font-size: 1.3rem;
+  color: #7c8390;
+}
+.contact-info-wrap span {
+  font-size: 1.75rem;
+  font-family: "semplicitaPro-semibold";
+  position: relative;
+  padding-left: 52px;
+  background-repeat: no-repeat;
+  word-break: break-all;
+}
+/* .contact-info-wrap span::before {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 1.25rem;
+  height: 1.25rem;
+} */
+.contact-info-wrap .row > *:nth-child(1) span {
+  background: url(assets/images/icons/call.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.contact-info-wrap .row > *:nth-child(2) span {
+  background: url(assets/images/icons/email.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.contact-info-wrap .row > *:nth-child(3) span {
+  background: url(assets/images/icons/location.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 /********************* End Contact Us Page  ********************
@@ -477,11 +536,20 @@ hr.divider {
     font-family: "semplicitaPro-medium", sans-serif;
     margin-bottom: 0;
   }
+  section {
+    padding: 60px 0px;
+  }
   header .navbar-collapse {
     background-color: #000;
   }
   header .navbar-collapse {
     padding: 16px;
+  }
+  .header-variant-one i {
+    color: #fff;
+  }
+  header .search-input-wrap i {
+    color: #676767;
   }
   header ul {
     text-align: center;
@@ -496,6 +564,9 @@ hr.divider {
   header .flushed-input {
     color: #000;
   }
+  .header .flushed-input ~ i {
+    color: #000;
+  }
   header .flushed-input::placeholder {
     color: #000;
   }
@@ -506,6 +577,9 @@ hr.divider {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+  .banner {
+    background-position: 50% 50%;
   }
 }
 
@@ -519,8 +593,14 @@ hr.divider {
   section {
     padding: 40px 0px;
   }
+  section p {
+    padding-bottom: 30px;
+  }
   .banner .content {
     align-items: center;
+  }
+  .flushed-input {
+    font-size: 1rem;
   }
   .swiper-horizontal > .swiper-pagination-bullets,
   .swiper-pagination-bullets.swiper-pagination-horizontal,
@@ -537,6 +617,9 @@ hr.divider {
   header .logo {
     max-width: 100px;
   }
+  main > *:nth-child(1):not(.banner) {
+    padding-top: 100px !important;
+  }
   .banner .content {
     padding-top: 50px;
   }
@@ -544,8 +627,11 @@ hr.divider {
   .colored-text {
     font-size: 2rem;
   }
-  main:nth-of-type(1) {
-    padding-top: 60px;
+
+  .contact-form label {
+    font-size: 1.3rem;
+    text-align: left;
+    width: 100%;
   }
 }
 

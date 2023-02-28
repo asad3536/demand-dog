@@ -32,6 +32,9 @@ img {
 a {
   color: inherit;
 }
+a:hover {
+  color: var(--color-primary-dark);
+}
 
 /************** Containers  *************/
 .custom-contain {
@@ -122,6 +125,11 @@ header .search-input-wrap > .btn:hover {
   border-color: #3b94d8;
   border-radius: 25px;
   box-shadow: 0 19px 35px 0 rgba(153, 173, 217, 0.19);
+  border: solid 3px #3a92d5;
+}
+.btn-variant-three:hover {
+  background-color: #3b94d8;
+  color: #fff;
   border: solid 3px #3a92d5;
 }
 
@@ -331,6 +339,9 @@ footer i {
 **************************************************************/
 .header-variant-one i {
   color: #201e1f;
+}
+.header-variant-one a:hover i {
+  color: var(--color-primary-dark);
 }
 .header-variant-one .btn {
   background-color: var(--color-primary);

@@ -104,7 +104,9 @@ p {
   box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
   border: 1px solid transparent;
 }
-
+header .search-input-wrap > .btn:hover {
+  box-shadow: none;
+}
 .btn-variant-two {
   background-color: #fff;
   color: #3b94d8;
@@ -157,7 +159,10 @@ header ul li a {
 }
 
 header ul li:hover > a {
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid #3b94d8;
+}
+header ul li a:hover {
+  color: #3b94d8;
 }
 header input::placeholder {
   color: #fff;
@@ -347,6 +352,14 @@ footer i {
 .services-page-wrapper .services h2:nth-of-type(1) {
   -webkit-text-stroke: 2px;
 }
+.services-page-wrapper .call-to-action::after {
+  background: url(assets/images/wave-small-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.services-page-wrapper .call-to-action {
+  padding: 90px 0px;
+}
 
 /********************* End Services Page  ********************
 
@@ -509,6 +522,9 @@ hr.divider {
 }
 
 @media screen and (max-width: 1199.98px) {
+  header ul li a {
+    font-size: 0.9rem;
+  }
   .call-to-action .logo-wrap {
     max-width: 300px;
     margin: auto;
@@ -562,7 +578,7 @@ hr.divider {
     justify-content: center;
   }
   header .flushed-input {
-    color: #000;
+    color: #676767;
   }
   .header .flushed-input ~ i {
     color: #000;
@@ -577,6 +593,12 @@ hr.divider {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+  header .flushed-input:focus {
+    color: #676767;
+  }
+  main > *:nth-child(1):not(.banner) {
+    padding-top: 100px;
   }
   .banner {
     background-position: 50% 50%;
@@ -617,9 +639,6 @@ hr.divider {
   header .logo {
     max-width: 100px;
   }
-  main > *:nth-child(1):not(.banner) {
-    padding-top: 100px !important;
-  }
   .banner .content {
     padding-top: 50px;
   }
@@ -639,5 +658,17 @@ hr.divider {
   .icon-card .card-img-wrap {
     width: 200px;
     height: 200px;
+  }
+  header .navbar-collapse {
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header .search-input-wrap {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    z-index: 0;
   }
 }

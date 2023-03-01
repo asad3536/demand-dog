@@ -144,12 +144,16 @@ header .search-input-wrap > .btn:hover {
 
 /************** Header Start *************/
 header {
-  position: absolute;
+  position: fixed;
   background-color: transparent;
   z-index: 1000;
   left: 0;
   right: 0;
   top: 0;
+}
+.header-bg {
+  background: white;
+  box-shadow: 4px 4px 10px 10px #301a1a28;
 }
 header .logo {
   width: 150px;

@@ -1,3 +1,22 @@
+
+//Sticky Header Background Color
+
+const header=document.querySelector(".header");
+
+document.addEventListener('scroll',()=>{
+  if(window.scrollY>20){
+
+    header.classList.add("header-bg")
+  }
+  else{
+    header.classList.remove("header-bg")
+  }
+
+
+})
+
+
+
 const swiper = new Swiper('.swiper', {
     slidesPerView: 6,
     spaceBetween: 10,

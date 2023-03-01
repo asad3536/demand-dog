@@ -6,10 +6,10 @@ const header=document.querySelector(".header");
 document.addEventListener('scroll',()=>{
   if(window.scrollY>20){
 
-    header.classList.add("header-bg");
+    header.classList.add("scrolled-header");
   }
   else{
-    header.classList.remove("header-bg");
+    header.classList.remove("scrolled-header");
   }
 
 })

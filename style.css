@@ -679,11 +679,11 @@ hr.divider {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 390px) {
+  header .logo {
+    max-width: 90px;
+  }
   header .search-input-wrap {
-    position: absolute;
-    top: 50px;
-    width: 100%;
-    z-index: 0;
+    max-width: 130px;
   }
 }
